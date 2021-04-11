@@ -95,7 +95,7 @@
            [:div.jh-type-object [:span.jh-empty-map]]
            [:table.jh-type-object
             [:tbody
-             (for [[k v] (sort-map this)]
+             (for [[k v] this]
                [:tr [:th.jh-key.jh-object-key (render k)]
                 [:td.jh-value.jh-object-value (render v)]])]]))
 
@@ -165,7 +165,7 @@
          [:div.jh-type-object [:span.jh-empty-map]]
          [:table.jh-type-object
           [:tbody
-           (for [[k v] (sort-map m)]
+           (for [[k v] m]
              ^{:key k} [:tr [:th.jh-key.jh-object-key (render-html k)]
                         [:td.jh-value.jh-object-value (render-html v)]])]]))
 
